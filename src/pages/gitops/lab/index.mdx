@@ -371,7 +371,7 @@ git push origin
 
 Now, let's work with Application Connect Enterprise. In this part, you are configuring artifacts, secrets and certificates.
 
-1. Open the **multi-tenancy-gitops-apps/sko-sample/ace-00-config** folder.
+1. Open the **multi-tenancy-gitops-apps/sko-sample/ace-00-configs** folder.
 
 2. Execute the commands below to generate the configuration YAML files.
     - SF_USER is *[Email addess used to log into Salesforce]*
@@ -393,9 +393,9 @@ SF_USER=<my-sf-user> SF_PWD=<my-sf-pwd> SF_CLIENT_ID=<my-sf-client-id> SF_CLIENT
 MAILTRAP_USER=<user> MAILTRAP_PWD=<pwd> ./15-ace-config-setdbparms-email.sh
 ```
 
-3. Verify that there are 9 YAML files generated in the *ace-00-config* folder.
+3. Verify that there are 9 YAML files generated in the *ace-00-configs* folder.
 
-4. Edit **multi-tenancy-gitops-apps/sko-sample/ace-00-config/kustomization.yaml** file.
+4. Edit **multi-tenancy-gitops-apps/sko-sample/ace-00-configs/kustomization.yaml** file.
 
 5. Uncomment the lines below (all the content).
 ```
@@ -422,7 +422,7 @@ git push origin
 
 8. Uncomment the lines below (all the content).
 ```
-- argocd/sko-sample/ace-00-config.yaml
+- argocd/sko-sample/ace-00-configs.yaml
 - argocd/sko-sample/ace-backend.yaml
 - argocd/sko-sample/ace-evnt2mail.yaml
 - argocd/sko-sample/ace-fwdmqevnt.yaml
